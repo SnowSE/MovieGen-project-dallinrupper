@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="movies.js"></script>
+  <title>Movie Picker</title>
+</head>
+<body>
+  <header>
+    <h1>Movie Picker</h1>
+  </header>
+  <main>
+    <section class="filters">
+      <h3>Genres</h3>
+      <select id="genre-selector">
+        <option value="action">Action</option>
+        <option value="adventure">Adventure</option>
+        <option value="comedy">Comedy</option>
+        <option value="crime">Crime</option>
+        <option value="drama">Drama</option>
+        <option value="romance">Romance</option>
+      </select>
+
+      <h3>Languages</h3>
+      <select id="language-selector">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="zh">ZH</option>
+      </select>
+
+      <h3>Type</h3>
+      <select id="type-selector">
+        <option value="movies">Movies</option>
+        <option value="series">Series</option>
+        <option value="all">All</option>
+      </select>
+    </section>
+
+    <section class="grid-container">
+    </section>
+  </main>
+</body>
+</html>
