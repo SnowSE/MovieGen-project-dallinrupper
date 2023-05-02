@@ -1,3 +1,4 @@
+// REQUIRMENT 11: a javascript class or javascript modules
 class MovieFetcher 
 {
 	constructor(apiKey, apiHost) {
@@ -19,7 +20,7 @@ class MovieFetcher
   
 	  const apiUrl = `https://streaming-availability.p.rapidapi.com/v2/search/basic?country=us&service=${checkedServices}&output_language=${selectedLanguage}&type=all&genre=${selectedGenre}&language=${selectedLanguage}&${cursorQuery}`;
 	  console.log('API URL:', apiUrl);
-  
+	  // REQUIRMENT 10: ajax to interact with an API 
 	  return fetch(apiUrl, options).then(response => response.json());
 	}
   
@@ -90,7 +91,7 @@ class MovieFetcher
   
 	displayMovies(moviesToDisplay) {
 	  localStorage.setItem('allMovies', JSON.stringify(moviesToDisplay));
-  
+		// REQUIRMENT 9: 2nd querySelector used
 	  const gridContainer = document.querySelector('.grid-container');
 	  gridContainer.innerHTML = '';
 	  const defaultImageUrl = 'https://via.placeholder.com/300x168.png?text=No+Image+Available';
@@ -117,6 +118,7 @@ class MovieFetcher
 	  }
 	
 	  addTitleClickEventListener(movieElement, movieIndex) {
+		// REQUIRMENT 9: one of two querySelectors
 		const movieTitle = movieElement.querySelector('h2');
 		movieTitle.style.cursor = 'pointer';
 	
@@ -125,7 +127,7 @@ class MovieFetcher
 		});
 	  }
 	}
-	
+	// REQUIRMENT 8: atleast 2 event listeners
 	document.addEventListener('DOMContentLoaded', () => {
 	  const apiKey = 'fe07250b03msh81b8cdc278ac240p1694d9jsnd3554ffecf3a';
 	  const apiHost = 'streaming-availability.p.rapidapi.com';

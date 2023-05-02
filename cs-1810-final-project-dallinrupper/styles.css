@@ -1,4 +1,4 @@
-/* styles.css */
+/* Requirment 4: this css file has more than 10 of my own hand-crafted css rules */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -29,7 +29,7 @@ h1 {
 h3 {
   margin-bottom: 5px;
 }
-
+/* REQUIRMENT 5: css flexbox below */
 .filters {
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@ h3 {
 #type-selector option {
   font-size: 16px;
 }
-
+/* REQUIRMENT 6: css gridbox below */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -181,7 +181,7 @@ button#search-button:hover {
   max-height: 25%;
   z-index: 999;
 }
-
+/* REQIRMENT 7: 2 css media queries below */
 @media screen and (max-width: 480px) {
   header {
     padding: 30px 0;
