@@ -30,10 +30,25 @@
         <option value="zh">ZH</option>
       </select>
 
+      <h3>Streaming Services</h3>
+      <div class="streaming-options">
+        <input type="checkbox" id="netflix" name="streaming-service" value="netflix" checked>
+        <label for="netflix">Netflix</label>
+        <input type="checkbox" id="prime" name="streaming-service" value="prime.buy" checked>
+        <label for="prime">Prime</label>
+        <input type="checkbox" id="hulu" name="streaming-service" value="hulu.addon.hbo" checked>
+        <label for="hulu">Hulu</label>
+        <input type="checkbox" id="peacock" name="streaming-service" value="peacock.free" checked>
+        <label for="peacock">Peacock</label>
+      </div>
+
       <button id="search-button">Search</button>
     </section>
 
     <section class="grid-container">
+      <div id="loading" style="display: none;">
+        <img class = "loading-image"src="images/loading.webp" alt="Loading..." />
+      </div>
     </section>
   </main>
 </body>

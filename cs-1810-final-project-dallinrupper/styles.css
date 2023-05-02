@@ -122,3 +122,90 @@ button#search-button {
 button#search-button:hover {
   background-color: #45a049;
 }
+
+ /* Checkbox styling */
+.streaming-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.streaming-options input[type="checkbox"] {
+  display: none;
+}
+
+.streaming-options label {
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  line-height: 24px;
+}
+
+.streaming-options label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+}
+
+.streaming-options label:after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #75b1e8;
+  border-radius: 2px;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.2s ease;
+}
+
+.streaming-options input[type="checkbox"]:checked + label:after {
+  transform: translateY(-50%) scale(1);
+}
+
+.loading-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 30px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .filters {
+    gap: 10px;
+  }
+
+  #genre-selector,
+  #language-selector {
+    width: 150px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+}
